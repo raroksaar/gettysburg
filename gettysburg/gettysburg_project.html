@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+ 
+  <!- widget -->
+  
+	<form action="https://eosfcweb01.eosfc-intl.net/N94044/OPAC/Search/SimpleSearch.aspx" id="searchSimple" method="get" name="searchSimple" target="_blank" data-gtm-form-interact-id="0">
+	<div class="form-row">
+	<div class="col"><label for="txtSearch"><h2><b>Search NPS Library catalog (NPSLibris):</b></h2></label></div>
+	</div>
+
+	<div class="form-row">
+	<div class="col"><input id="txtSearch" maxlength="255" name="txtSearch" size="25" type="text" value="Gettysburg" data-gtm-form-interact-field-id="0"> <input name="selectUsing" type="hidden" value="2.0">   
+	<button class="btn btn-primary space-above" id="searchButton" name="rows" type="submit" value="20">Search</button> 
+	</div>
+	</form>
+  <!- end widget -->
+  
+  <br>
+
+ <div id="map" style="width: 100%; height: 750px;"></div>
+ 
+</body>
+</html>
+
+<script>
+  // Initialize the map
+  const map = L.map('map', {
+    crs: L.CRS.Simple, // Use a simple coordinate reference system
+    minZoom: -2,       // Allow zooming out
+  });
+
+  // Define the image dimensions (e.g., 1000x800 pixels)
+  const bounds = [[0, 0], [3000, 5500]];
+
+  // Add the image as an overlay
+  const image = L.imageOverlay('gettysburg_brochure.jpg', bounds).addTo(map);
+  //const image = L.imageOverlay('gettysburg_brochure.png', bounds).addTo(map);
+
+  // Set the map view to fit the image bounds
+  map.fitBounds(bounds);
+</script>
+
+<script>
+  // Add a marker with a popup
+  // units [from bottom, from left]
+  const marker = L.marker([1340, 975]).addTo(map); // Coordinates within the image bounds
+  marker.bindPopup('<a href="https://en.wikipedia.org/wiki/High-water_mark_of_the_Confederacy">High Water Mark Wikipedia article</a>');
+
+ marker2 = L.marker([1140, 1000]).addTo(map); 
+  marker2.bindPopup('<a href="https://en.wikipedia.org/wiki/Pennsylvania_State_Memorial">Pennsylvania Memorial Wikipedia article</a>');
+
+
+RoundTopMarker = L.marker([700, 910]).addTo(map); 
+  RoundTopMarker.bindPopup('<a href="https://en.wikipedia.org/wiki/Little_Round_Top">Little Round Top Wikipedia article</a>');
+
+
+</script>
+
