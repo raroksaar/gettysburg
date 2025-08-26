@@ -46,27 +46,26 @@
 </script>
 
 <script>
-  // Add a marker with a popup
-  // units [from bottom, from left]
-  
-    // Add a marker with a popup
-  // units [from bottom, from left]
   
   // pixels:
   // width= 2619 height = 1251
   // resolution = 96 dpi
-  
   // x,y coordinates
+
+  // Add a marker with a popup
+  // units [from bottom, from left]
+	
   const marker = L.marker([1340, 975]).addTo(map); // Coordinates within the image bounds
   marker.bindPopup('<a href="https://en.wikipedia.org/wiki/High-water_mark_of_the_Confederacy">High Water Mark Wikipedia article</a>');
 
  Penna_marker = L.marker([1140, 1000]).addTo(map); 
   Penna_marker.bindPopup('<a href="https://en.wikipedia.org/wiki/Pennsylvania_State_Memorial">Pennsylvania Memorial Wikipedia article</a>');
 
-
 RoundTopMarker = L.marker([700, 910]).addTo(map); 
   RoundTopMarker.bindPopup('<a href="https://en.wikipedia.org/wiki/Little_Round_Top">Little Round Top Wikipedia article</a>');
 
+MapCenterMarker = L.marker([1310, 625]).addTo(map); 
+  MapCenterMarker.bindPopup('x=1310 y=625');
 
 </script>
 
