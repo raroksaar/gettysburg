@@ -65,9 +65,20 @@
 
   // Add a marker with a popup
   // units [from bottom, from left]
+  
+  var greyIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-grey.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+
+
 	
-  const marker = L.marker([1340, 975]).addTo(map); // Coordinates within the image bounds
-  marker.bindPopup('1. <a href="https://en.wikipedia.org/wiki/High-water_mark_of_the_Confederacy">High Water Mark Wikipedia article</a>');
+  HighWatermarker = L.marker([1340, 975]).addTo(map); // Coordinates within the image bounds
+  HighWatermarker.bindPopup('1. <a href="https://en.wikipedia.org/wiki/High-water_mark_of_the_Confederacy">High Water Mark Wikipedia article</a>');
 
  Penna_marker = L.marker([1140, 1000]).addTo(map); 
   Penna_marker.bindPopup('2. <a href="https://en.wikipedia.org/wiki/Pennsylvania_State_Memorial">Pennsylvania Memorial Wikipedia article</a>');
@@ -75,36 +86,40 @@
 RoundTopMarker = L.marker([700, 910]).addTo(map); 
   RoundTopMarker.bindPopup('3. <a href="https://en.wikipedia.org/wiki/Little_Round_Top">Little Round Top Wikipedia article</a>');
 
-DevilsDenMarker = L.marker([680, 780]).addTo(map); 
+DevilsDenMarker = L.marker([680, 780], {icon: greyIcon}).addTo(map); 
   DevilsDenMarker.bindPopup('4. <a href="https://en.wikipedia.org/wiki/Devil%27s_Den">Devil&apos;s Den Wikipedia article</a>');
 
-WheatFieldMarker = L.marker([880, 780]).addTo(map); 
+WheatFieldMarker = L.marker([880, 780], {icon: greyIcon}).addTo(map); 
   WheatFieldMarker.bindPopup('5. <a href="https://en.wikipedia.org/wiki/Battle_of_Gettysburg,_second_day">The Wikipedia article on 2nd day actions</a>');
 
-PeachOrchardMarker = L.marker([980, 660]).addTo(map); 
+PeachOrchardMarker = L.marker([980, 660], {icon: greyIcon}, {icon: greyIcon}).addTo(map); 
   PeachOrchardMarker.bindPopup('6. <a href="https://en.wikipedia.org/wiki/The_Peach_Orchard">Peach Orchard Wikipedia article</a>');
 
 	
-PitzerMarker = L.marker([1170, 570]).addTo(map); 
+PitzerMarker = L.marker([1170, 570], {icon: greyIcon}).addTo(map); 
   PitzerMarker.bindPopup('7. <a href="https://www.nps.gov/places/pitzer-woods.htm">NPS virtual tour of Pitzer Woods</a>');
 
-VirginiaMarker = L.marker([1310, 625]).addTo(map); 
+VirginiaMarker = L.marker([1310, 625], {icon: greyIcon}).addTo(map); 
   VirginiaMarker.bindPopup('8. <a href="https://en.wikipedia.org/wiki/Virginia_Monument">Virginia Monument Wikipedia article</a>');
 
-NorthCarolinaMarker = L.marker([1475, 720]).addTo(map); 
+NorthCarolinaMarker = L.marker([1475, 720], {icon: greyIcon}).addTo(map); 
   NorthCarolinaMarker.bindPopup('9. <a href="https://en.wikipedia.org/wiki/North_Carolina_State_Monument_%28Gettysburg%2C_Pennsylvania%29">North Carolina Monument Wikipedia article</a>');
 
-McPhersonRidgeMarker = L.marker([1975, 650]).addTo(map); 
+McPhersonRidgeMarker = L.marker([1975, 650], {icon: greyIcon}).addTo(map); 
   McPhersonRidgeMarker.bindPopup('10. <a href="https://en.wikipedia.org/wiki/McPherson_Ridge">McPherson Ridge Wikipedia article</a>');
 
 EternalLightMarker = L.marker([2370, 725]).addTo(map); 
   EternalLightMarker.bindPopup('11. <a href="https://en.wikipedia.org/wiki/Eternal_Light_Peace_Memorial">Eternal Light Peace Memorial Wikipedia article</a>');
 
-OakRidgeMarker = L.marker([2210, 765]).addTo(map); 
+OakRidgeMarker = L.marker([2210, 765], {icon: greyIcon}).addTo(map); 
   OakRidgeMarker.bindPopup('12. <a href="https://www.nps.gov/places/oak-ridg.htm">NPS Oak Ridge virtual tour video');
 
-BarlowKnollMarker = L.marker([2295, 1100]).addTo(map); 
+BarlowKnollMarker = L.marker([2295, 1100], {icon: greyIcon}).addTo(map); 
   BarlowKnollMarker.bindPopup('13. <a href="https://www.battlefields.org/learn/maps/gettysburg-fight-barlows-knoll-july-1-1863-245pm-430pm">Barlow Knoll article on American Battlefield Trust site');
+
+
+
+//L.marker([300, 500], {icon: greyIcon}).addTo(map);
 
 
 </script>
