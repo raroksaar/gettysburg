@@ -75,7 +75,14 @@
   shadowSize: [41, 41]
 });
 
-
+  var goldIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
 	
   HighWatermarker = L.marker([1340, 975]).addTo(map); // Coordinates within the image bounds
   HighWatermarker.bindPopup('1. <a href="https://en.wikipedia.org/wiki/High-water_mark_of_the_Confederacy">High Water Mark Wikipedia article</a>');
@@ -108,7 +115,7 @@ NorthCarolinaMarker = L.marker([1475, 720], {icon: greyIcon}).addTo(map);
 McPhersonRidgeMarker = L.marker([1975, 650], {icon: greyIcon}).addTo(map); 
   McPhersonRidgeMarker.bindPopup('10. <a href="https://en.wikipedia.org/wiki/McPherson_Ridge">McPherson Ridge Wikipedia article</a>');
 
-EternalLightMarker = L.marker([2370, 725]).addTo(map); 
+EternalLightMarker = L.marker([2370, 725], {icon: goldIcon}).addTo(map); 
   EternalLightMarker.bindPopup('11. <a href="https://en.wikipedia.org/wiki/Eternal_Light_Peace_Memorial">Eternal Light Peace Memorial Wikipedia article</a>');
 
 OakRidgeMarker = L.marker([2210, 765], {icon: greyIcon}).addTo(map); 
