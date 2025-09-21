@@ -58,20 +58,18 @@
 	//]).addTo(map).bindPopup('I am a polygon.');
 
 
-	//const popup = L.popup()
-	//	.setLatLng([39.812403, -77.235732])
-	//	.setContent('High Water Mark.')
-	//	.openOn(map);
+	const popup = L.popup()
+		.setLatLng([39.812403, -77.235732])
+		.setContent('High Water Mark.');
 
 	HighWatermarker = L.marker([39.812403, -77.235732]).addTo(map); // Coordinates within the image bounds
 		HighWatermarker.bindPopup('High Water Mark');
 
-	VisitorCentermarker = L.marker([39.811433, -77.22599]).addTo(map); // Coordinates within the image bounds
+	VisitorCentermarker = L.marker([39.811433, -77.22599]).addTo(map); 
 		VisitorCentermarker.bindPopup('Visitor Center');
 		
 		
 		
-
 	function onMapClick(e) {
 		popup
 			.setLatLng(e.latlng)
