@@ -68,8 +68,9 @@
 
 
 	const popup = L.popup()
-		.setLatLng([39.812403, -77.235732])
-		.setContent('High Water Mark.');
+		//.setLatLng([39.812403, -77.235732])
+		//.setContent('High Water Mark.')
+		;
 
 	HighWatermarker = L.marker([39.812403, -77.235732]).addTo(map); // Coordinates within the image bounds
 		HighWatermarker.bindPopup('High Water Mark');
@@ -78,12 +79,21 @@
 		VisitorCentermarker.bindPopup('Visitor Center');
 		
 		
+	// Add a click event listener, var is global in scope
+	// https://www.google.com/maps/place/39%C2%B0
+	
+	var googlelink = "?";
+      map.on('click', function(e) {
+         
+		 googlelink = (e.latlng.toString().substring(7,e.latlng.toString().length-1)) + '<br>https://www.google.com/maps/place/' + (e.latlng.toString().substring(7,e.latlng.toString().length-1));
+      });
 		
 	function onMapClick(e) {
 		popup
 			.setLatLng(e.latlng)
-			.setContent(`You clicked the map at ${e.latlng.toString()}`)
-			.openOn(map);
+			.setContent(googlelink)
+			//.setContent(`You clicked the map at:<br> (${e.latlng.toString()}<br>=====`)
+			.openOn(map)
 	}
 
 	map.on('click', onMapClick);
