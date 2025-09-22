@@ -5,7 +5,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title>Quick Start - Leaflet</title>
+	<title>Gettysburg</title>
+	<h2>Current Gettysburg Battlefield</h2>
+	<a href="https://library.nps.gov/gettysburg">Gettysburg visitor brochure</a>
+	
+	<p>
 	
 	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 
@@ -18,8 +22,8 @@
 			margin: 0;
 		}
 		.leaflet-container {
-			height: 400px;
-			width: 600px;
+			height: 900px;
+			width: 1100px;
 			max-width: 100%;
 			max-height: 100%;
 		}
@@ -31,10 +35,10 @@
 
 
 
-<div id="map" style="width: 900px; height: 600px;"></div>
+<div id="map" style="width: 1100px; height: 900px;"></div>
 <script>
 
-	const map = L.map('map').setView([39.812278, -77.231655], 16);
+	const map = L.map('map').setView([39.8133, -77.242362], 16);
 
 	const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		maxZoom: 19,
