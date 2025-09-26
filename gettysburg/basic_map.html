@@ -72,20 +72,25 @@
 		//.setContent('High Water Mark.')
 		;
 
-	HighWatermarker = L.marker([39.812403, -77.235732]).addTo(map); // Coordinates within the image bounds
-		HighWatermarker.bindPopup('High Water Mark');
+	//HighWatermarker = L.marker([39.81169, -77.22620]).addTo(map); // Coordinates within the image bounds
+	//	HighWatermarker.bindPopup('High Water Mark');
 
-	VisitorCentermarker = L.marker([39.811433, -77.22599]).addTo(map); 
+	VisitorCentermarker = L.marker([39.81169, -77.22599]).addTo(map); 
 		VisitorCentermarker.bindPopup('Visitor Center');
 		
 		
 	// Add a click event listener, var is global in scope
 	// https://www.google.com/maps/place/39%C2%B0
 	
-	var googlelink = "?";
+	var googlelink = "";
+	var coords = "";
+	var link ="";
+	var url ="";
       map.on('click', function(e) {
-         
-		 googlelink = (e.latlng.toString().substring(7,e.latlng.toString().length-1)) + '<br>https://www.google.com/maps/place/' + (e.latlng.toString().substring(7,e.latlng.toString().length-1));
+	     coords = e.latlng.toString().substring(7,e.latlng.toString().length-1);
+		 url = 'https://www.google.com/maps/place/' + coords;
+		 link = '<a href="' + url + '" >Google maps link</a>';
+		 googlelink = coords + '<br>' + link;
       });
 		
 	function onMapClick(e) {
