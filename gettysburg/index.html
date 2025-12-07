@@ -102,9 +102,20 @@
   popupAnchor: [1, -34],
   shadowSize: [41, 41]
 });
+
+
+	const visitor_icon = L.icon({
+		iconUrl: 'images/logo.png',
+		iconSize: [25, 35],
+		iconAnchor: [30, 20],
+		popupAnchor: [0, 0]
+	});	
+	
+	//const tallinn = L.marker([59.433765, 24.744194],{icon: eesti_icon}).addTo(map)
+	//	.bindPopup('<b>Tallinn Vabaduse väljak  - Freedom Square<br><a href="../help.html">Abi -- Help</b></a><br>');
 	
 	
-VisitorCentermarker = L.marker([1475, 975],{icon: greenIcon}).addTo(map); // Coordinates within the image bounds
+VisitorCentermarker = L.marker([1475, 975],{icon: visitor_icon}).addTo(map); // Coordinates within the image bounds
   VisitorCentermarker.bindPopup('<a href="https://www.nps.gov/gett/learn/photosmultimedia/virtualtour.htm">Visitor Center: vitual video tour</a>');
 	
 HighWatermarker = L.marker([1340, 975]).addTo(map); // Coordinates within the image bounds
