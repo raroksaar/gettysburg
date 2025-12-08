@@ -111,6 +111,20 @@
 		popupAnchor: [0, 0]
 	});	
 	
+	const union_icon = L.icon({
+		iconUrl: 'images/union.jpg',
+		iconSize: [35, 20],
+		iconAnchor: [30, 15],
+		popupAnchor: [0, 0]
+	});	
+	
+	const confederate_icon = L.icon({
+		iconUrl: 'images/confederate.jpg',
+		iconSize: [35, 20],
+		iconAnchor: [30, 15],
+		popupAnchor: [0, 0]
+	});	
+	
 	//const tallinn = L.marker([59.433765, 24.744194],{icon: eesti_icon}).addTo(map)
 	//	.bindPopup('<b>Tallinn Vabaduse väljak  - Freedom Square<br><a href="../help.html">Abi -- Help</b></a><br>');
 	
@@ -118,56 +132,56 @@
 VisitorCentermarker = L.marker([1475, 975],{icon: visitor_icon}).addTo(map); // Coordinates within the image bounds
   VisitorCentermarker.bindPopup('<a href="https://www.nps.gov/gett/learn/photosmultimedia/virtualtour.htm">Visitor Center: vitual video tour</a>');
 	
-HighWatermarker = L.marker([1340, 975]).addTo(map); // Coordinates within the image bounds
+HighWatermarker = L.marker([1340, 975],{icon: union_icon}).addTo(map); // Coordinates within the image bounds
   HighWatermarker.bindPopup('1. <a href="https://en.wikipedia.org/wiki/High-water_mark_of_the_Confederacy">High Water Mark Wikipedia article</a>');
 
-Penna_marker = L.marker([1140, 1000]).addTo(map); 
+Penna_marker = L.marker([1140, 1000],{icon: union_icon}).addTo(map); 
   Penna_marker.bindPopup('2. <a href="https://en.wikipedia.org/wiki/Pennsylvania_State_Memorial">Pennsylvania Memorial Wikipedia article</a>');
 
-RoundTopMarker = L.marker([700, 910]).addTo(map); 
+RoundTopMarker = L.marker([700, 910],{icon: union_icon}).addTo(map); 
   RoundTopMarker.bindPopup('3. <a href="https://en.wikipedia.org/wiki/Little_Round_Top">Little Round Top Wikipedia article</a>');
 
-DevilsDenMarker = L.marker([680, 780], {icon: greyIcon}).addTo(map); 
+DevilsDenMarker = L.marker([680, 780], {icon: confederate_icon}).addTo(map); 
   DevilsDenMarker.bindPopup('4. <a href="https://en.wikipedia.org/wiki/Devil%27s_Den">Devil&apos;s Den Wikipedia article</a>');
 
-WheatFieldMarker = L.marker([880, 780], {icon: greyIcon}).addTo(map); 
+WheatFieldMarker = L.marker([880, 780], {icon: confederate_icon}).addTo(map); 
   WheatFieldMarker.bindPopup('5. <a href="https://en.wikipedia.org/wiki/Battle_of_Gettysburg,_second_day">The Wikipedia article on 2nd day actions</a>');
 
-PeachOrchardMarker = L.marker([980, 660], {icon: greyIcon}).addTo(map); 
+PeachOrchardMarker = L.marker([980, 660], {icon: confederate_icon}).addTo(map); 
   PeachOrchardMarker.bindPopup('6. <a href="https://en.wikipedia.org/wiki/The_Peach_Orchard">Peach Orchard Wikipedia article</a>');
 
 	
-PitzerMarker = L.marker([1170, 570], {icon: greyIcon}).addTo(map); 
+PitzerMarker = L.marker([1170, 570], {icon: confederate_icon}).addTo(map); 
   PitzerMarker.bindPopup('7. <a href="https://www.nps.gov/places/pitzer-woods.htm">NPS virtual tour of Pitzer Woods</a>');
 
-VirginiaMarker = L.marker([1310, 625], {icon: greyIcon}).addTo(map); 
+VirginiaMarker = L.marker([1310, 625], {icon: confederate_icon}).addTo(map); 
   VirginiaMarker.bindPopup('8. <a href="https://en.wikipedia.org/wiki/Virginia_Monument">Virginia Monument Wikipedia article</a>');
 
-NorthCarolinaMarker = L.marker([1475, 720], {icon: greyIcon}).addTo(map); 
+NorthCarolinaMarker = L.marker([1475, 720], {icon: confederate_icon}).addTo(map); 
   NorthCarolinaMarker.bindPopup('9. <a href="https://en.wikipedia.org/wiki/North_Carolina_State_Monument_%28Gettysburg%2C_Pennsylvania%29">North Carolina Monument Wikipedia article</a>');
 
-McPhersonRidgeMarker = L.marker([1975, 650], {icon: greyIcon}).addTo(map); 
+McPhersonRidgeMarker = L.marker([1975, 650], {icon: confederate_icon}).addTo(map); 
   McPhersonRidgeMarker.bindPopup('10. <a href="https://en.wikipedia.org/wiki/McPherson_Ridge">McPherson Ridge Wikipedia article</a>');
 
 EternalLightMarker = L.marker([2370, 725], {icon: greenIcon}).addTo(map); 
   EternalLightMarker.bindPopup('11. <a href="https://en.wikipedia.org/wiki/Eternal_Light_Peace_Memorial">Eternal Light Peace Memorial Wikipedia article</a>');
 
-OakRidgeMarker = L.marker([2210, 765], {icon: greyIcon}).addTo(map); 
+OakRidgeMarker = L.marker([2210, 765], {icon: confederate_icon}).addTo(map); 
   OakRidgeMarker.bindPopup('12. <a href="https://www.nps.gov/places/oak-ridg.htm">NPS Oak Ridge virtual tour video');
 
-BarlowKnollMarker = L.marker([2295, 1100], {icon: greyIcon}).addTo(map); 
+BarlowKnollMarker = L.marker([2295, 1100], {icon: confederate_icon}).addTo(map); 
   BarlowKnollMarker.bindPopup('13. <a href="https://www.battlefields.org/learn/maps/gettysburg-fight-barlows-knoll-july-1-1863-245pm-430pm">Barlow Knoll article on American Battlefield Trust site');
 
-CulpsHillMarker = L.marker([1675, 1170]).addTo(map); 
+CulpsHillMarker = L.marker([1675, 1170],{icon: union_icon}).addTo(map); 
   CulpsHillMarker.bindPopup('14. <a href="https://en.wikipedia.org/wiki/Culp%27s_Hill">Culp&apos;s Hill Wikipedia article <br> <a href="https://www.nps.gov/gett/learn/historyculture/culps-hill.htm">NPS Culps Hill rehabilitation article');
 
-SpanglersSpringMarker = L.marker([1380, 1295]).addTo(map); 
+SpanglersSpringMarker = L.marker([1380, 1295],{icon: union_icon}).addTo(map); 
   SpanglersSpringMarker.bindPopup('15. <a href="https://www.nps.gov/places/spangler-s-spring.htm">NPS Spangler&apos;s Spring video');
 
-CemeteryHillMarker = L.marker([1560, 1110]).addTo(map); 
+CemeteryHillMarker = L.marker([1560, 1110],{icon: union_icon}).addTo(map); 
   CemeteryHillMarker.bindPopup('16. <a href="https://en.wikipedia.org/wiki/Cemetery_Hill">Cemetery Hill Wikipedia article <br> <a href="https://www.nps.gov/gett/learn/photosmultimedia/cemetery-ridge-virtual-tour.htm">NPS Cemetery Hill virtual tour video');
   
- NationalCemeteryMarker = L.marker([1560, 960]).addTo(map); 
+ NationalCemeteryMarker = L.marker([1560, 960],{icon: union_icon}).addTo(map); 
   NationalCemeteryMarker.bindPopup('17. <a href="https://en.wikipedia.org/wiki/Gettysburg_National_Cemetery">Gettysburg National Cemetery Wikipedia article <br> <a href="https://www.nps.gov/gett/learn/historyculture/cemetery.htm">NPS National Cemetery article'); 
   //textmarker = L.marker([1000, 1800],{icon: greenIcon}).addTo(map); // Coordinates within the image bounds
   // textmarker.bindPopup('<img src="images/Highwatermark.jpg" alt="High Water Mark">High Water Mark');
