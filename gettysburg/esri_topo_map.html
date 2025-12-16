@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Gettysburg area topographic map</title>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+   <script src="https://unpkg.com/esri-leaflet@2.5.3/dist/esri-leaflet.js"></script>
+   
+
+
+</head>
+<body>
+   <div id="map" style="height: 650px;"></div>
+   <script>
+       var map = L.map('map').setView([39.81169, -77.22599], 10);
+       L.esri.basemapLayer('Topographic').addTo(map);
+	   
+	   const visitor_icon = L.icon({
+			iconUrl: 'images/logo.png',
+			iconSize: [25, 35],
+			iconAnchor: [20, 25],
+			popupAnchor: [0, 0]
+	    });	
+
+
+	const popup = L.popup();
+
+	VisitorCentermarker = L.marker([39.81169, -77.22599],{icon: visitor_icon}).addTo(map); 
+		VisitorCentermarker.bindPopup('Visitor Center');
+		
+   </script>
+</body>
+</html>
