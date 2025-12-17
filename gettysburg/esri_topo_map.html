@@ -24,11 +24,36 @@
 			popupAnchor: [0, 0]
 	    });	
 
-
 	const popup = L.popup();
 
 	VisitorCentermarker = L.marker([39.81169, -77.22599],{icon: visitor_icon}).addTo(map); 
 		VisitorCentermarker.bindPopup('Visitor Center');
+
+	var googlelink = "";
+	var coords = "";
+	var link ="";
+	var url ="";
+	
+      map.on('click', function(e) {
+	     coords = e.latlng.toString().substring(7,e.latlng.toString().length-1);
+		 url = 'https://www.google.com/maps/place/' + coords;
+		 link = '<a href="' + url + '" >Google maps link</a>';
+		 googlelink = coords + '<br>' + link;
+		 coords = coords.replace(', ','~');
+		 bingurl = 'https://www.bing.com/maps/search?cp=' + coords + '&lvl=15';
+	     binglink = '<a href="' + bingurl + '" >Bing maps link</a>';
+
+		
+      });
+	
+	function onMapClick(e) {
+		popup
+			.setLatLng(e.latlng)
+			.setContent(googlelink + '<br>' + binglink )
+			.openOn(map)
+	}
+
+	map.on('click', onMapClick);
 		
    </script>
 </body>
