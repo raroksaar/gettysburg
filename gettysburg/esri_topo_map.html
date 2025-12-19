@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Gettysburg area topographic map</title>
+<H2>
+   <title>Gettysburg topographic map</title>
+   	<div style="text-align: center;">
+	Gettysburg area topographic map <br>
+</H2>
+<H3>
+   	<div style="text-align: center;">
+	<a href="https://library.nps.gov/gettysburg">Gettysburg visitor brochure</a>
+</H3>
+    </div>
+
    <meta charset="utf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
@@ -14,7 +24,7 @@
 <body>
    <div id="map" style="height: 650px;"></div>
    <script>
-       var map = L.map('map').setView([39.81169, -77.22599], 10);
+       var map = L.map('map').setView([39.81169, -77.22599], 13);
        L.esri.basemapLayer('Topographic').addTo(map);
 	   
 	   const visitor_icon = L.icon({
