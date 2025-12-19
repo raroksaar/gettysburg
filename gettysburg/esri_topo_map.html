@@ -44,6 +44,7 @@
 	var link ="";
 	var url ="";
 	
+	// add OpenStreetMap links, like https://www.openstreetmap.org/search?query=39.818232%2C+-77.280064&zoom=13
       map.on('click', function(e) {
 	     coords = e.latlng.toString().substring(7,e.latlng.toString().length-1);
 		 url = 'https://www.google.com/maps/place/' + coords;
