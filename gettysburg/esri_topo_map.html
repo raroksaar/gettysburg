@@ -50,8 +50,13 @@
 		 url = 'https://www.google.com/maps/place/' + coords;
 		 link = '<a href="' + url + '" >Google maps link</a>';
 		 googlelink = coords + '<br>' + link;
-		 coords = coords.replace(', ','~');
-		 bingurl = 'https://www.bing.com/maps/search?cp=' + coords + '&lvl=15';
+		 
+		 opencoords = coords.replace(' ','');
+		 openurl = 'https://www.openstreetmap.org/search?query=' + opencoords + '#map=16';
+	     openlink = '<a href="' + openurl + '" >OpenStreetMap link</a>';
+		 
+		 bingcoords = coords.replace(', ','~');
+		 bingurl = 'https://www.bing.com/maps/search?cp=' + bingcoords + '&lvl=15';
 	     binglink = '<a href="' + bingurl + '" >Bing maps link</a>';
 
 		
@@ -60,7 +65,7 @@
 	function onMapClick(e) {
 		popup
 			.setLatLng(e.latlng)
-			.setContent(googlelink + '<br>' + binglink )
+			.setContent(googlelink + '<br>' + binglink + '<br>' + openlink )
 			.openOn(map)
 	}
 
