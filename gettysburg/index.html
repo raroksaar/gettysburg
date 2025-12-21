@@ -118,15 +118,21 @@
 		popupAnchor: [0, 0]
 	});	
 	
+	
+	const confederate_circle_marker = L.circleMarker({
+		radius: 20,
+		fillColor: "black",
+		fillOpacity: 0.5,
+		color: "black",
+		weight: 2
+		});
+
 	const confederate_icon = L.icon({
 		iconUrl: 'images/confederate.jpg',
 		iconSize: [35, 20],
 		iconAnchor: [30, 15],
 		popupAnchor: [0, 0]
-	});	
-	
-	//const tallinn = L.marker([59.433765, 24.744194],{icon: eesti_icon}).addTo(map)
-	//	.bindPopup('<b>Tallinn Vabaduse väljak  - Freedom Square<br><a href="../help.html">Abi -- Help</b></a><br>');
+	});		
 	
 	
 VisitorCentermarker = L.marker([1475, 975],{icon: visitor_icon}).addTo(map); // Coordinates within the image bounds
