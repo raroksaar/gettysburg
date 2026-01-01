@@ -19,7 +19,6 @@
    <script src="https://unpkg.com/esri-leaflet@2.5.3/dist/esri-leaflet.js"></script>
    
 
-
 </head>
 
 <H4>
@@ -28,9 +27,9 @@ Click anywhere on the map to get links to Google, Bing and OpenStreetMap maps <b
 <br>
 </H4>
 <body>
-   <div id="map" style="height: 650px;"></div>
+   <div id="map" style="height: 700px;"></div>
    <script>
-       var map = L.map('map').setView([39.81169, -77.22599], 13);
+       var map = L.map('map').setView([39.760354, -77.662354], 10);
        L.esri.basemapLayer('Topographic').addTo(map);
 	   // Imagery
 	   // Terrain
@@ -69,11 +68,19 @@ Click anywhere on the map to get links to Google, Bing and OpenStreetMap maps <b
 			radius:50
 		}).addTo(map);	
 		
+		var polygon = L.polygon([
+			[39.854422, -77.264744],
+			[39.854422, -77.157304],
+			[39.757233, -77.157304],
+			[39.757233, -77.264744]
+		]).addTo(map);
+		//polygon.bindPopup('<a href="https://library.nps.gov/gettysburg">Gettysburg visitor brochure</a>');
+		
 
 	   
 	   const visitor_icon = L.icon({
 			iconUrl: 'images/logo.png',
-			iconSize: [25, 35],
+			iconSize: [20, 30],
 			iconAnchor: [20, 25],
 			popupAnchor: [0, 0]
 	    });	
