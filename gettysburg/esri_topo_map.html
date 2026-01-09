@@ -38,35 +38,42 @@ Click anywhere on the map to get links to Google, Bing and OpenStreetMap maps <b
 	   // Outdoor
 
        //NW point 39.854422, -77.264744
-		var NW_corner = L.circle([39.854422, -77.264744], {
-			color: 'black',
-			fillColor: 'white',
-			fillOpacity: 0.5,
-			radius:50
-		}).addTo(map);	 
+	   L.marker([39.849757, -77.258606]).addTo(map)
+		//.bindPopup('A pretty CSS popup.<br> Easily customizable.')
+		//.openPopup();
+		
+		//var NW_corner = L.circle([39.854422, -77.264744], {
+		//	color: 'black',
+		//	fillColor: 'white',
+		//	fillOpacity: 0.5,
+		//	radius:50
+		//}).addTo(map);	 
 
 		// NE point` 39.851877, -77.157304
-		var NE_corner = L.circle([39.854422, -77.157304], {
-			color: 'black',
-			fillColor: 'white',
-			fillOpacity: 0.5,
-			radius:50
-		}).addTo(map);	
+		//39.851602, -77.165222
+		L.marker([39.849757, -77.165737]).addTo(map)
+		
+		//var NE_corner = L.circle([39.854422, -77.157304], {
+		//	color: 'black',
+		//	fillColor: 'white',
+		//	fillOpacity: 0.5,
+		//	radius:50
+		//}).addTo(map);	
 		
 		//SW 39.757233, -77.263527
-		var SW_corner = L.circle([39.757233, -77.264744], {
-			color: 'black',
-			fillColor: 'white',
-			fillOpacity: 0.5,
-			radius:50
-		}).addTo(map);	
+		//var SW_corner = L.circle([39.757233, -77.264744], {
+		//	color: 'black',
+		//	fillColor: 'white',
+		//	fillOpacity: 0.5,
+		//	radius:50
+		//}).addTo(map);	
 		
-		var SE_corner = L.circle([39.757233, -77.157304], {
-			color: 'black',
-			fillColor: 'white',
-			fillOpacity: 0.5,
-			radius:50
-		}).addTo(map);	
+		//var SE_corner = L.circle([39.757233, -77.157304], {
+		//	color: 'black',
+		//	fillColor: 'white',
+		//	fillOpacity: 0.5,
+		//	radius:50
+		//}).addTo(map);	
 		
 		var polygon = L.polygon([
 			[39.854422, -77.264744],
