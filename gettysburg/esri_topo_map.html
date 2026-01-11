@@ -38,7 +38,7 @@ Click anywhere on the map to get links to Google, Bing and OpenStreetMap maps <b
 	   // Outdoor
 
        //NW point 39.854422, -77.264744
-	   L.marker([39.849757, -77.258606]).addTo(map)
+	   //L.marker([39.849757, -77.258606]).addTo(map)
 		//.bindPopup('A pretty CSS popup.<br> Easily customizable.')
 		//.openPopup();
 		
@@ -51,7 +51,13 @@ Click anywhere on the map to get links to Google, Bing and OpenStreetMap maps <b
 
 		// NE point` 39.851877, -77.157304
 		//39.851602, -77.165222
-		L.marker([39.849757, -77.165737]).addTo(map)
+		//L.marker([39.849757, -77.165737]).addTo(map)
+		
+		// rectangle pin 39.851075, -77.210884
+		L.marker([39.846594, -77.210884]).addTo(map)
+			.bindPopup('Extent of park brochure map <br> <a href="https://library.nps.gov/gettysburg">Gettysburg visitor brochure</a>')
+		    //.openPopup();
+		
 		
 		//var NE_corner = L.circle([39.854422, -77.157304], {
 		//	color: 'black',
@@ -83,7 +89,10 @@ Click anywhere on the map to get links to Google, Bing and OpenStreetMap maps <b
 		]).addTo(map);
 		//polygon.bindPopup('<a href="https://library.nps.gov/gettysburg">Gettysburg visitor brochure</a>');
 		
-
+		// Emmitsburg 39.704425, -77.32667
+		L.marker([39.704425, -77.32667]).addTo(map)
+			.bindPopup('Confederate advance through Emmitsburg<br> <a href="https://www.emmitsburg.net/archive_list/articles/history/civil_war/confederate_invasion.htm">Emmitsburg Historical Society account</a>')
+		    //.openPopup();
 	   
 	   const visitor_icon = L.icon({
 			iconUrl: 'images/logo.png',
