@@ -65,33 +65,13 @@ Click anywhere on the map to get links to Google, Bing and OpenStreetMap maps <b
 		//39.851602, -77.165222
 		//L.marker([39.849757, -77.165737]).addTo(map)
 		
+=======
+	
+>>>>>>> 66645b78be16e947b3f3dbfa5e8e4d955b11901a
 		// rectangle pin 39.851075, -77.210884
 		L.marker([39.846594, -77.210884]).addTo(map)
-			.bindPopup('Extent of park brochure map <br> <a href="https://library.nps.gov/gettysburg">Gettysburg visitor brochure</a>')
-		    //.openPopup();
-		
-		
-		//var NE_corner = L.circle([39.854422, -77.157304], {
-		//	color: 'black',
-		//	fillColor: 'white',
-		//	fillOpacity: 0.5,
-		//	radius:50
-		//}).addTo(map);	
-		
-		//SW 39.757233, -77.263527
-		//var SW_corner = L.circle([39.757233, -77.264744], {
-		//	color: 'black',
-		//	fillColor: 'white',
-		//	fillOpacity: 0.5,
-		//	radius:50
-		//}).addTo(map);	
-		
-		//var SE_corner = L.circle([39.757233, -77.157304], {
-		//	color: 'black',
-		//	fillColor: 'white',
-		//	fillOpacity: 0.5,
-		//	radius:50
-		//}).addTo(map);	
+			.bindPopup('Extent of park brochure map<br> <a href="https://library.nps.gov/gettysburg/esri_topo_map.html">Reset map</a>');
+			// 	<a href="https://library.nps.gov/gettysburg/esri_topo_map.html">Current Esri topographic map of Gettysburg</a>
 		
 		var polygon = L.polygon([
 			[39.854422, -77.264744],
@@ -99,7 +79,6 @@ Click anywhere on the map to get links to Google, Bing and OpenStreetMap maps <b
 			[39.757233, -77.157304],
 			[39.757233, -77.264744]
 		]).addTo(map);
-		//polygon.bindPopup('<a href="https://library.nps.gov/gettysburg">Gettysburg visitor brochure</a>');
 		
 		// Emmitsburg 39.704425, -77.32667
 		L.marker([39.704425, -77.32667]).addTo(map)
@@ -111,13 +90,13 @@ Click anywhere on the map to get links to Google, Bing and OpenStreetMap maps <b
 			iconSize: [20, 30],
 			iconAnchor: [20, 25],
 			popupAnchor: [0, 0]
-	    });	
-
-	const popup = L.popup();
+	    });
 
 	VisitorCentermarker = L.marker([39.81169, -77.22599],{icon: visitor_icon}).addTo(map); 
-		VisitorCentermarker.bindPopup('Visitor Center');
-
+		VisitorCentermarker.bindPopup('<a href="https://library.nps.gov/gettysburg">Gettysburg visitor brochure</a>');
+	
+	const popup = L.popup();
+	
 	var googlelink = "";
 	var coords = "";
 	var link ="";
