@@ -37,6 +37,18 @@ Click anywhere on the map to get links to Google, Bing and OpenStreetMap maps <b
 	   // Streets
 	   // Outdoor
 
+	   var parks = L.esri.featureLayer({
+		   url: 'https://services.arcgis.com/.../FeatureServer/0',
+		   style: function () {
+			   return { color: '#70ca49', weight: 2 };
+		   }
+		}).addTo(map);
+
+		parks.bindPopup(function (layer) {
+			return 'Park Name: ' + layer.feature.properties.NAME;
+			});
+		
+		
        //NW point 39.854422, -77.264744
 	   //L.marker([39.849757, -77.258606]).addTo(map)
 		//.bindPopup('A pretty CSS popup.<br> Easily customizable.')
