@@ -49,28 +49,20 @@ Click anywhere on the map to get links to Google, Bing and OpenStreetMap maps <b
 			return 'Park Name: ' + layer.feature.properties.NAME;
 			});
 		
-		
-       //NW point 39.854422, -77.264744
-	   //L.marker([39.849757, -77.258606]).addTo(map)
-		//.bindPopup('A pretty CSS popup.<br> Easily customizable.')
-		//.openPopup();
-		
-		//var NW_corner = L.circle([39.854422, -77.264744], {
-		//	color: 'black',
-		//	fillColor: 'white',
-		//	fillOpacity: 0.5,
-		//	radius:50
-		//}).addTo(map);	 
-
-		// NE point` 39.851877, -77.157304
-		//39.851602, -77.165222
-		//L.marker([39.849757, -77.165737]).addTo(map)
-		
+	
 
 		// rectangle pin 39.851075, -77.210884
 		L.marker([39.846594, -77.210884]).addTo(map)
 			.bindPopup('Extent of park brochure map<br> <a href="https://library.nps.gov/gettysburg/esri_topo_map.html">Reset map</a>');
 			// 	<a href="https://library.nps.gov/gettysburg/esri_topo_map.html">Current Esri topographic map of Gettysburg</a>
+
+		var shilo_polygon = L.polygon([
+			[35.166508, -88.368908],
+			[35.166508, -88.29828],	
+			[35.112716, -88.29828],
+			[35.112716, -88.368908]
+		]).addTo(map);	
+		
 		
 		var polygon = L.polygon([
 			[39.854422, -77.264744],
