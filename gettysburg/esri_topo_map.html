@@ -2,9 +2,9 @@
 <html>
 <head>
 <H2>
-   <title>Gettysburg topographic map</title>
+   <title>Topographic map</title>
    	<div style="text-align: center;">
-	Gettysburg area topographic map <br>
+	Area topographic map <br>
 </H2>
 <H3>
    	<div style="text-align: center;">
@@ -29,13 +29,31 @@ Click anywhere on the map to get links to Google, Bing and OpenStreetMap maps <b
 <body>
    <div id="map" style="height: 700px;"></div>
    <script>
-       var map = L.map('map').setView([39.760354, -77.662354], 10);
-       L.esri.basemapLayer('Topographic').addTo(map);
+       //var map = L.map('map').setView([39.760354, -77.662354], 10);
+
 	   // Imagery
 	   // Terrain
 	   // Topographic
 	   // Streets
 	   // Outdoor
+	const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+	const place = urlParams.get('place'); // returns null if not found	
+	
+	if (place === "shiloh") {
+		console.log("shiloh");
+		//const coords = "[35.151511, -88.322072]"
+		var map = L.map('map').setView([35.151511, -88.322072], 10);
+	} else if (place === "gettysburg") {
+		console.log("gettysburg");
+		//const coords = "[39.81169, -77.22599]"
+		var map = L.map('map').setView([39.81169, -77.22599], 10);
+	} else {
+		console.log("Good evening");
+		//default to Gettysburg
+		var map = L.map('map').setView([39.81169, -77.22599], 10);  
+	}
+        L.esri.basemapLayer('Topographic').addTo(map);
 
 
 	   var parks = L.esri.featureLayer({
@@ -88,6 +106,9 @@ Click anywhere on the map to get links to Google, Bing and OpenStreetMap maps <b
 
 	ShilohVisitorCentermarker = L.marker([35.151511, -88.322072],{icon: visitor_icon}).addTo(map); 
 		ShilohVisitorCentermarker.bindPopup('<a href="https://library.nps.gov/shiloh">Shiloh visitor brochure</a>');
+		
+	FtDonaldsonmarker = L.marker([36.485720, -87.847979],{icon: visitor_icon}).addTo(map);
+	FtDonaldsonmarker.bindPopup('Fort Donelson');	
 	
 	const popup = L.popup();
 	
